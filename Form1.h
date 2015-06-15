@@ -29,6 +29,15 @@ namespace WindowsFormApplication1 {
 	{ 3, 0, 6, 0, 1, 2, 0, 0, 0 },
 	{ 0, 8, 0, 0, 0, 7, 0, 0, 0 },
 	{ 0, 0, 7, 0, 0, 0, 6, 0, 0 } };
+	int SudokuBezZmian[9][9] = { { 0, 0, 5, 0, 0, 0, 3, 0, 0 },
+	{ 0, 0, 0, 1, 0, 0, 0, 6, 0 },
+	{ 0, 0, 0, 9, 6, 0, 4, 0, 7 },
+	{ 8, 2, 0, 0, 4, 0, 0, 0, 6 },
+	{ 0, 1, 0, 7, 0, 6, 0, 8, 0 },
+	{ 7, 0, 0, 0, 2, 0, 0, 4, 1 },
+	{ 3, 0, 6, 0, 1, 2, 0, 0, 0 },
+	{ 0, 8, 0, 0, 0, 7, 0, 0, 0 },
+	{ 0, 0, 7, 0, 0, 0, 6, 0, 0 } };
 	list<int>jakaslista[9][9];
 	int probnatablica[4][4];
 	list <int> wiersz[9];
@@ -77,10 +86,6 @@ namespace WindowsFormApplication1 {
 	private: System::Windows::Forms::Button^  button1;
 	private: System::Windows::Forms::Button^  button2;
 	private: System::Windows::Forms::DataGridView^  dataGridView2;
-
-
-
-
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column10;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column11;
@@ -102,6 +107,9 @@ namespace WindowsFormApplication1 {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^  Column9;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+
+	private: System::Windows::Forms::Button^  button3;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -115,15 +123,15 @@ namespace WindowsFormApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle11 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle12 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle13 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle14 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle15 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle16 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle17 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle18 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -149,6 +157,8 @@ namespace WindowsFormApplication1 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
@@ -172,90 +182,90 @@ namespace WindowsFormApplication1 {
 			// 
 			// Column1
 			// 
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle10->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column1->DefaultCellStyle = dataGridViewCellStyle1;
+			this->Column1->DefaultCellStyle = dataGridViewCellStyle10;
 			this->Column1->HeaderText = L"";
 			this->Column1->Name = L"Column1";
 			this->Column1->Width = 30;
 			// 
 			// Column2
 			// 
-			dataGridViewCellStyle2->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle11->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column2->DefaultCellStyle = dataGridViewCellStyle2;
+			this->Column2->DefaultCellStyle = dataGridViewCellStyle11;
 			this->Column2->HeaderText = L"";
 			this->Column2->Name = L"Column2";
 			this->Column2->Width = 30;
 			// 
 			// Column3
 			// 
-			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle12->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle12->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column3->DefaultCellStyle = dataGridViewCellStyle3;
+			this->Column3->DefaultCellStyle = dataGridViewCellStyle12;
 			this->Column3->HeaderText = L"";
 			this->Column3->Name = L"Column3";
 			this->Column3->Width = 30;
 			// 
 			// Column4
 			// 
-			dataGridViewCellStyle4->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle13->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle13->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column4->DefaultCellStyle = dataGridViewCellStyle4;
+			this->Column4->DefaultCellStyle = dataGridViewCellStyle13;
 			this->Column4->HeaderText = L"";
 			this->Column4->Name = L"Column4";
 			this->Column4->Width = 30;
 			// 
 			// Column5
 			// 
-			dataGridViewCellStyle5->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle14->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle14->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column5->DefaultCellStyle = dataGridViewCellStyle5;
+			this->Column5->DefaultCellStyle = dataGridViewCellStyle14;
 			this->Column5->HeaderText = L"";
 			this->Column5->Name = L"Column5";
 			this->Column5->Width = 30;
 			// 
 			// Column6
 			// 
-			dataGridViewCellStyle6->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle15->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle15->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column6->DefaultCellStyle = dataGridViewCellStyle6;
+			this->Column6->DefaultCellStyle = dataGridViewCellStyle15;
 			this->Column6->HeaderText = L"";
 			this->Column6->Name = L"Column6";
 			this->Column6->Width = 30;
 			// 
 			// Column7
 			// 
-			dataGridViewCellStyle7->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle16->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle16->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column7->DefaultCellStyle = dataGridViewCellStyle7;
+			this->Column7->DefaultCellStyle = dataGridViewCellStyle16;
 			this->Column7->HeaderText = L"";
 			this->Column7->Name = L"Column7";
 			this->Column7->Width = 30;
 			// 
 			// Column8
 			// 
-			dataGridViewCellStyle8->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle17->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle17->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column8->DefaultCellStyle = dataGridViewCellStyle8;
+			this->Column8->DefaultCellStyle = dataGridViewCellStyle17;
 			this->Column8->HeaderText = L"";
 			this->Column8->Name = L"Column8";
 			this->Column8->Width = 30;
 			// 
 			// Column9
 			// 
-			dataGridViewCellStyle9->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle18->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle18->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column9->DefaultCellStyle = dataGridViewCellStyle9;
+			this->Column9->DefaultCellStyle = dataGridViewCellStyle18;
 			this->Column9->HeaderText = L"";
 			this->Column9->Name = L"Column9";
 			this->Column9->Width = 30;
@@ -289,7 +299,7 @@ namespace WindowsFormApplication1 {
 				this->Column10,
 					this->Column11, this->Column12, this->Column13, this->Column14, this->Column15, this->Column16, this->Column17, this->Column18
 			});
-			this->dataGridView2->Location = System::Drawing::Point(12, 240);
+			this->dataGridView2->Location = System::Drawing::Point(241, 228);
 			this->dataGridView2->Name = L"dataGridView2";
 			this->dataGridView2->Size = System::Drawing::Size(719, 220);
 			this->dataGridView2->TabIndex = 3;
@@ -376,11 +386,35 @@ namespace WindowsFormApplication1 {
 			this->label3->Text = L"Pamietaj ¿eby wprowadzaæ wartoœci tylko z list potencjalnych wartosci!!!Potrzebuj"
 				L"esz pomocy \?";
 			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Kristen ITC", 14.25F, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->label4->Location = System::Drawing::Point(306, 126);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(317, 27);
+			this->label4->TabIndex = 7;
+			this->label4->Text = L"Czy Wartoœci s¹ dobrze wpisane\?";
+			// 
+			// button3
+			// 
+			this->button3->Location = System::Drawing::Point(12, 323);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(217, 41);
+			this->button3->TabIndex = 9;
+			this->button3->Text = L"Wyœwietl listy potencjalnych wartoœci";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(863, 508);
+			this->ClientSize = System::Drawing::Size(972, 508);
+			this->Controls->Add(this->button3);
+			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
@@ -389,7 +423,7 @@ namespace WindowsFormApplication1 {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->dataGridView1);
 			this->Name = L"Form1";
-			this->Text = L"Form1";
+			this->Text = L"Moja Aplikacja Sudoku";
 			this->Load += gcnew System::EventHandler(this, &Form1::Form1_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
@@ -442,6 +476,201 @@ namespace WindowsFormApplication1 {
 				dataGridView1->Rows[j]->Cells[i]->Value = Sudoku[j][i];
 			}
 		}
+		label4->Text="Podano dozwolone wartoœci";
+		label4->BackColor = System::Drawing::Color::Green;
+		//
+		//////////////////////////////////WIERSZE//////////////////////////////////////////////////////
+		for (int i = 0; i < 9; i++)
+		{
+			for (int j = 0; j < 9; j++)
+			{
+				wiersz[i].push_back(Sudoku[i][j]);//wprowadzenie zmiennych wierszowych
+			}
+		}
+		///////////////////////////////////KOLUMNY/////////////////////////////////////////////////////
+		for (int i = 0; i < 9; i++)
+		{
+			for (int j = 0; j < 9; j++)
+			{
+				kolumna[j].push_back(Sudoku[i][j]);//wprowadzenie zmiennych do ka¿dej kolumny
+			}
+		}
+		////////////////////////////////PUDE£KOWE////////////////////////////////////////////////////////
+		///////////////////////////////////////////PUDE£KO1//////////////////////////////////////////////
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				pudelko[0].push_back(Sudoku[i][j]);
+			}
+		}
+		/////////////////////////////////////////PUDELKO2////////////////////////////////////////////////
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 3; j < 6; j++)
+			{
+				pudelko[1].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO3/////////////////////////////////////////////////
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 6; j < 9; j++)
+			{
+				pudelko[2].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO4/////////////////////////////////////////////////
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				pudelko[3].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO5/////////////////////////////////////////////////
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 3; j < 6; j++)
+			{
+				pudelko[4].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO6/////////////////////////////////////////////////
+		for (int i = 3; i < 6; i++)
+		{
+			for (int j = 6; j < 9; j++)
+			{
+				pudelko[5].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO7/////////////////////////////////////////////////
+		for (int i = 6; i < 9; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				pudelko[6].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO8/////////////////////////////////////////////////
+		for (int i = 6; i < 9; i++)
+		{
+			for (int j = 3; j < 6; j++)
+			{
+				pudelko[7].push_back(Sudoku[i][j]);
+			}
+		}
+		////////////////////////////////////////PUDE£KO9/////////////////////////////////////////////////
+		for (int i = 6; i < 9; i++)
+		{
+			for (int j = 6; j < 9; j++)
+			{
+				pudelko[8].push_back(Sudoku[i][j]);
+			}
+		}
+		//
+		///////////////////////////////////////1,2,3 WIERSZ MARKUPU/////////////////////////////////////////
+
+		for (int j = 0; j < 3; j++)
+		{
+			for (int i = 0; i < 9; i++)
+			{
+				if (Sudoku[j][i].ToString() == "0")
+				{
+					for (list<int>::iterator iter = wiersz[j].begin(); iter != wiersz[j].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					for (list<int>::iterator iter = kolumna[i].begin(); iter != kolumna[i].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					for (list<int>::iterator iter = pudelko[(int)ceil(i / 3)].begin(); iter != pudelko[(int)ceil(i / 3)].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					sumalist[j][i].remove(0);
+
+					for (list<int>::iterator iter = sumalist[j][i].begin(); iter != sumalist[j][i].end(); iter++)
+					{
+						Markup[j][i].remove(*iter);
+					}
+				}
+				else
+				{
+					Markup[j][i].clear();
+					Markup[j][i].push_back(Sudoku[j][i]);
+				}
+			}
+		}
+		//////////////////////////////////////4,5,6 Wiersze Markupu///////////////////////////////////////////////////
+		for (int j = 3; j < 6; j++)
+		{
+			for (int i = 0; i < 9; i++)
+			{
+				if (Sudoku[j][i].ToString() == "0")
+				{
+					for (list<int>::iterator iter = wiersz[j].begin(); iter != wiersz[j].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					for (list<int>::iterator iter = kolumna[i].begin(); iter != kolumna[i].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					for (list<int>::iterator iter = pudelko[(int)ceil((i + 9) / 3)].begin(); iter != pudelko[(int)ceil((i + 9) / 3)].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					sumalist[j][i].remove(0);
+					for (list<int>::iterator iter = sumalist[j][i].begin(); iter != sumalist[j][i].end(); iter++)
+					{
+						Markup[j][i].remove(*iter);
+					}
+				}
+				else
+				{
+					Markup[j][i].clear();
+					Markup[j][i].push_back(Sudoku[j][i]);
+				}
+			}
+		}
+		//////////////////////////////////////7,8,9 Wiersze Markupu///////////////////////////////////////////////////
+		for (int j = 6; j < 9; j++)
+		{
+			//cout << "Wiersz" << j + 1 << endl;
+			for (int i = 0; i < 9; i++)
+			{
+				if (Sudoku[j][i].ToString() == "0")
+				{
+					for (list<int>::iterator iter = wiersz[j].begin(); iter != wiersz[j].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					for (list<int>::iterator iter = kolumna[i].begin(); iter != kolumna[i].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					for (list<int>::iterator iter = pudelko[(int)ceil((i + 18) / 3)].begin(); iter != pudelko[(int)ceil((i + 18) / 3)].end(); iter++)
+					{
+						sumalist[j][i].push_back(*iter);
+					}
+					sumalist[j][i].remove(0);
+					
+					for (list<int>::iterator iter = sumalist[j][i].begin(); iter != sumalist[j][i].end(); iter++)
+					{
+						Markup[j][i].remove(*iter);
+					}
+
+				}
+				else
+				{
+					Markup[j][i].clear();
+					Markup[j][i].push_back(Sudoku[j][i]);
+				}
+			}
+		}
+		
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 		//TAK SIÊ DOSTAJEMY DO ELEMENTU 0,0
@@ -451,18 +680,57 @@ namespace WindowsFormApplication1 {
 			for (System::Int32 i = 0; i < 9; i++)
 			{
 			//PRZYPISANIE TEGO CO WPISZEMY DO SUDOKU!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!OK
-				Sudoku[j][i] =Convert::ToSingle(dataGridView1->Rows[j]->Cells[i]->Value);
+				if ((Convert::ToSingle(dataGridView1->Rows[j]->Cells[i]->Value) < 10) && (Convert::ToSingle(dataGridView1->Rows[j]->Cells[i]->Value) >= 0)==true)//dopisane
+				{
+					Sudoku[j][i] = Convert::ToSingle(dataGridView1->Rows[j]->Cells[i]->Value);
+				}
+				else
+				{
+					label4->Text = "Podano wartoœæ wykraczaj¹c¹ poza zakres Sudoku!!!Zamieniam j¹ na 0";
+					Sudoku[j][i] = SudokuBezZmian[j][i];
+				}
 			}
 
 		}
-		for (System::Int32 j = 0; j < 4; j++)
+		//for (System::Int32 j = 0; j < 4; j++)
+		//{
+			//for (System::Int32 i = 0; i < 4; i++)
+			//{
+			//	dataGridView2->Rows[j]->Cells[i]->Value = Sudoku[j][i];//Sudoku[j][i]
+			//}
+	//}
+		if (label4->Text == "Podano dozwolone wartoœci")
 		{
-			for (System::Int32 i = 0; i < 4; i++)
-			{
-				dataGridView2->Rows[j]->Cells[i]->Value = Sudoku[j][i];
-			}
+			label4->BackColor = System::Drawing::Color::Green;
+		}
+		else
+		{
+			label4->BackColor = System::Drawing::Color::Red;
 		}
 	}
+private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
+	
+	for (int i = 0; i < 9; i++)
+	{
+		for (int j = 0; j < 9; j++)
+		{
+				//dataGridView2->Rows[j]->Cells[i]->Value = (0).ToString();
+			dataGridView2->Rows[j]->Cells[i]->Value = "";
+		}
+	}
+
+	for (int i = 0; i < 9; i++)
+	{
+	 for (int j = 0; j < 9; j++)
+	     {
+	       for (list<int>::iterator iter = Markup[j][i].begin(); iter != Markup[j][i].end(); iter++)
+		   {
+		dataGridView2->Rows[j]->Cells[i]->Value += (*iter).ToString();
+	       }
+	     }
+	}
+	
+}
 };
 }
 
