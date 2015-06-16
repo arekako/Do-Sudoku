@@ -110,6 +110,8 @@ namespace WindowsFormApplication1 {
 	private: System::Windows::Forms::Label^  label4;
 
 	private: System::Windows::Forms::Button^  button3;
+	private: System::Windows::Forms::Button^  button4;
+	private: System::Windows::Forms::Button^  button5;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -123,15 +125,15 @@ namespace WindowsFormApplication1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle10 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle11 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle12 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle13 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle14 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle15 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle16 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle17 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle18 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle5 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle6 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^  dataGridViewCellStyle9 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -159,6 +161,8 @@ namespace WindowsFormApplication1 {
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
@@ -182,90 +186,90 @@ namespace WindowsFormApplication1 {
 			// 
 			// Column1
 			// 
-			dataGridViewCellStyle10->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle10->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column1->DefaultCellStyle = dataGridViewCellStyle10;
+			this->Column1->DefaultCellStyle = dataGridViewCellStyle1;
 			this->Column1->HeaderText = L"";
 			this->Column1->Name = L"Column1";
 			this->Column1->Width = 30;
 			// 
 			// Column2
 			// 
-			dataGridViewCellStyle11->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle11->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle2->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column2->DefaultCellStyle = dataGridViewCellStyle11;
+			this->Column2->DefaultCellStyle = dataGridViewCellStyle2;
 			this->Column2->HeaderText = L"";
 			this->Column2->Name = L"Column2";
 			this->Column2->Width = 30;
 			// 
 			// Column3
 			// 
-			dataGridViewCellStyle12->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle12->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column3->DefaultCellStyle = dataGridViewCellStyle12;
+			this->Column3->DefaultCellStyle = dataGridViewCellStyle3;
 			this->Column3->HeaderText = L"";
 			this->Column3->Name = L"Column3";
 			this->Column3->Width = 30;
 			// 
 			// Column4
 			// 
-			dataGridViewCellStyle13->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle13->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle4->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column4->DefaultCellStyle = dataGridViewCellStyle13;
+			this->Column4->DefaultCellStyle = dataGridViewCellStyle4;
 			this->Column4->HeaderText = L"";
 			this->Column4->Name = L"Column4";
 			this->Column4->Width = 30;
 			// 
 			// Column5
 			// 
-			dataGridViewCellStyle14->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle14->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle5->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle5->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column5->DefaultCellStyle = dataGridViewCellStyle14;
+			this->Column5->DefaultCellStyle = dataGridViewCellStyle5;
 			this->Column5->HeaderText = L"";
 			this->Column5->Name = L"Column5";
 			this->Column5->Width = 30;
 			// 
 			// Column6
 			// 
-			dataGridViewCellStyle15->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle15->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle6->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle6->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column6->DefaultCellStyle = dataGridViewCellStyle15;
+			this->Column6->DefaultCellStyle = dataGridViewCellStyle6;
 			this->Column6->HeaderText = L"";
 			this->Column6->Name = L"Column6";
 			this->Column6->Width = 30;
 			// 
 			// Column7
 			// 
-			dataGridViewCellStyle16->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle16->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle7->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column7->DefaultCellStyle = dataGridViewCellStyle16;
+			this->Column7->DefaultCellStyle = dataGridViewCellStyle7;
 			this->Column7->HeaderText = L"";
 			this->Column7->Name = L"Column7";
 			this->Column7->Width = 30;
 			// 
 			// Column8
 			// 
-			dataGridViewCellStyle17->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle17->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle8->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column8->DefaultCellStyle = dataGridViewCellStyle17;
+			this->Column8->DefaultCellStyle = dataGridViewCellStyle8;
 			this->Column8->HeaderText = L"";
 			this->Column8->Name = L"Column8";
 			this->Column8->Width = 30;
 			// 
 			// Column9
 			// 
-			dataGridViewCellStyle18->BackColor = System::Drawing::Color::Yellow;
-			dataGridViewCellStyle18->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle9->BackColor = System::Drawing::Color::Yellow;
+			dataGridViewCellStyle9->Font = (gcnew System::Drawing::Font(L"Lucida Calligraphy", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Column9->DefaultCellStyle = dataGridViewCellStyle18;
+			this->Column9->DefaultCellStyle = dataGridViewCellStyle9;
 			this->Column9->HeaderText = L"";
 			this->Column9->Name = L"Column9";
 			this->Column9->Width = 30;
@@ -408,11 +412,35 @@ namespace WindowsFormApplication1 {
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
 			// 
+			// button4
+			// 
+			this->button4->Location = System::Drawing::Point(824, 473);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(75, 23);
+			this->button4->TabIndex = 10;
+			this->button4->Text = L"------>>>";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &Form1::button4_Click);
+			// 
+			// button5
+			// 
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(238)));
+			this->button5->Location = System::Drawing::Point(38, 414);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(75, 64);
+			this->button5->TabIndex = 11;
+			this->button5->Text = L"X";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &Form1::button5_Click);
+			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(972, 508);
+			this->Controls->Add(this->button5);
+			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->label4);
 			this->Controls->Add(this->label3);
@@ -429,10 +457,10 @@ namespace WindowsFormApplication1 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
-
 		}
 #pragma endregion
 	private: System::Void Form1_Load(System::Object^  sender, System::EventArgs^  e) {
+		Form^ PlanszaDoGenerowaniaSudoku = gcnew Form;//dopisane
 		dataGridView1->ColumnCount = 9;
 		dataGridView1->RowCount = 9;
 		dataGridView2->ColumnCount = 9;
@@ -670,11 +698,12 @@ namespace WindowsFormApplication1 {
 				}
 			}
 		}
-		
+		//button4->Click += gcnew EventHandler(this, &Form1::button4_Click);
 	}
 	private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 		//TAK SIÊ DOSTAJEMY DO ELEMENTU 0,0
-		label1->Text = (Convert::ToSingle(dataGridView1->Rows[0]->Cells[0]->Value).ToString());
+		label1->Text = "zapisa³em";
+			//(Convert::ToSingle(dataGridView1->Rows[0]->Cells[0]->Value).ToString());
 		for (System::Int32 j = 0; j < 9; j++)
 			{
 			for (System::Int32 i = 0; i < 9; i++)
@@ -686,7 +715,7 @@ namespace WindowsFormApplication1 {
 				}
 				else
 				{
-					label4->Text = "Podano wartoœæ wykraczaj¹c¹ poza zakres Sudoku!!!Zamieniam j¹ na 0";
+					label4->Text = "Podano wartoœæ wykraczaj¹c¹ poza zakres Sudoku!!!Zamieniam j¹";
 					Sudoku[j][i] = SudokuBezZmian[j][i];
 				}
 			}
@@ -730,6 +759,87 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 	     }
 	}
 	
+}
+private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
+	//Form^ PlanszaDoGenerowaniaSudoku;
+	int SudokuWype³nione[9][9] = { 
+	{ 6, 9, 5, 2, 7, 4, 3, 1, 8 },
+	{ 4, 7, 8, 1, 3, 5, 9, 6, 2 },
+	{ 2, 3, 1, 9, 6, 8, 4, 5, 7 }, 
+	{ 8, 2, 3, 5, 4, 1, 7, 9, 6 },
+	{ 5, 1, 4, 7, 9, 6, 2, 8, 3 }, 
+	{ 7, 6, 9, 8, 2, 3, 5, 4, 1 }, 
+	{ 3, 5, 6, 4, 1, 2, 8, 7, 9 },
+	{ 9, 8, 2, 6, 5, 7, 1, 3, 4 },
+	{ 1, 4, 7, 3, 8, 9, 6, 2, 5 } };
+Form^ PlanszaDoGenerowaniaSudoku = gcnew Form;
+	PlanszaDoGenerowaniaSudoku->Show();
+	PlanszaDoGenerowaniaSudoku->Width = 800;
+	PlanszaDoGenerowaniaSudoku->Height = 600;
+	PlanszaDoGenerowaniaSudoku->Text = "Jak generowaæ plansze";
+	Rectangle ekran = System::Windows::Forms::Screen::GetBounds(PlanszaDoGenerowaniaSudoku);
+	PlanszaDoGenerowaniaSudoku->Top = (ekran.Height / 2) - (PlanszaDoGenerowaniaSudoku->Height / 2);
+	DataGridView^ TaSamoSudoku = gcnew DataGridView;
+	TaSamoSudoku = dataGridView1;
+	for (System::Int32 j = 0; j < 9; j++)
+	{
+		for (System::Int32 i = 0; i < 9; i++)
+		{
+			TaSamoSudoku->Rows[j]->Cells[i]->Value = SudokuWype³nione[j][i];//Sudoku[j][i]
+		}
+	}
+	TaSamoSudoku->Size = System::Drawing::Size(290, 210);
+	TaSamoSudoku->Show();
+	//TextBox^ pole_tekstowe = gcnew TextBox;
+	TaSamoSudoku->Location = Point(10, 50);
+	TaSamoSudoku->ColumnCount = 9;
+	TaSamoSudoku->RowCount = 9;
+	PlanszaDoGenerowaniaSudoku->Controls->Add(TaSamoSudoku);
+	/*Form^ okno = gcnew Form;
+	okno->Show();
+	okno->Text = "Drugie okno";
+	TextBox^ pole_tekstowe = gcnew TextBox;
+	pole_tekstowe->Location = Point(10, 50);
+	okno->Controls->Add(pole_tekstowe);*/
+	//////////////////////////////////////////////////////////////////
+	RadioButton^ znacznik1 = gcnew RadioButton;
+	znacznik1->Show();
+	znacznik1->Location = Point(350, 55);
+	PlanszaDoGenerowaniaSudoku->Controls->Add(znacznik1);
+	RadioButton^ znacznik2 = gcnew RadioButton;
+	znacznik1->Show();
+	znacznik1->Location = Point(350, 60);
+	PlanszaDoGenerowaniaSudoku->Controls->Add(znacznik2);
+	//////////////////////////////////////////////////////////////////
+	Button^ button6 = gcnew Button;
+	button6->Show();
+	button6->Location = Point(100, 300);
+	button6->Text = "X";
+	button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 27.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+		static_cast<System::Byte>(238)));
+	button6->Size = System::Drawing::Size(75, 64);
+	button6->Click += gcnew EventHandler(this, &Form1::button6_Click);
+	PlanszaDoGenerowaniaSudoku->Controls->Add(button6);
+	//////////////////////////////////////////////////////////////////
+	Button^ button7 = gcnew Button;
+	button7->Show();
+	button7->Location = Point(400, 150);
+	button7->Text = "Zamien";
+	button7->Size = System::Drawing::Size(75, 150);
+	button7->Click += gcnew EventHandler(this, &Form1::button7_Click);
+	PlanszaDoGenerowaniaSudoku->Controls->Add(button7);
+	//////////////////////////////////////////////////////////////////
+}
+private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
+	Close();
+}
+		
+ private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
+	 //tutaj maj¹ byc funkcjonalnoœci do zamiany wierszy ale nie jest widoczny obiekt TaSama? czemu?
+
 }
 };
 }
